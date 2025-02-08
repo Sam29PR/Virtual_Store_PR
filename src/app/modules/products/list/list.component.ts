@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-list',
+  selector: 'app-product-list',
   templateUrl: './list.component.html',
-  styleUrl: './list.component.css'
+  styleUrls: ['./list.component.scss'],
 })
 export class ListComponent {
-
+  products = [
+    { id: 1, name: 'Camiseta', price: 25 },
+    { id: 2, name: 'Gorra', price: 15 },
+    { id: 3, name: 'Reloj', price: 50 },
+  ];
 }
