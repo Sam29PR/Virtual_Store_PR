@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: false ,
   selector: 'app-product-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss'],
