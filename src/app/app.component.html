@@ -6,6 +6,36 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Hola Mundo </h1>
+  <div class="flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Virtual Store</h1>
+      <nav>
+        <button class="lg:hidden text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+        <ul class="hidden lg:flex space-x-4">
+          <li><a href="#" class="hover:text-gray-200">Inicio</a></li>
+          <li><a href="#" class="hover:text-gray-200">Productos</a></li>
+          <li><a href="#" class="hover:text-gray-200">Carrito</a></li>
+          <li><a href="#" class="hover:text-gray-200">Login</a></li>
+        </ul>
+      </nav>
+      
+    </header>
+  
+    <!-- Main Content -->
+    <main class="flex-1 p-6 bg-gray-100">
+      <router-outlet></router-outlet>
+    </main>
+  
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 text-center p-4">
+      <p>&copy; 2025 Virtual Store. All rights reserved.</p>
+    </footer>
+  </div>
+  
 </body>
 </html>
