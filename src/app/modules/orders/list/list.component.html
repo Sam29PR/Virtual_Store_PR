@@ -1,1 +1,45 @@
-<p>list works!</p>
+<div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-4">Lista de Pedidos</h1>
+  
+    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <table class="w-full border-collapse">
+        <thead class="bg-blue-500 text-white">
+          <tr>
+            <th class="p-3 text-left">Pedido ID</th>
+            <th class="p-3 text-left">Cliente</th>
+            <th class="p-3 text-left">Estado</th>
+            <th class="p-3 text-left">Total</th>
+            <th class="p-3 text-left">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pedido of pedidos" class="border-b hover:bg-gray-100">
+            <td class="p-3">{{ pedido.id }}</td>
+            <td class="p-3">{{ pedido.cliente }}</td>
+            <td class="p-3">
+              <span
+                class="px-2 py-1 rounded text-white"
+                [ngClass]="{
+                  'bg-green-500': pedido.estado === 'Completado',
+                  'bg-yellow-500': pedido.estado === 'Pendiente',
+                  'bg-red-500': pedido.estado === 'Cancelado'
+                }"
+              >
+                {{ pedido.estado }}
+              </span>
+            </td>
+            <td class="p-3 font-bold">{{ pedido.total | currency }}</td>
+            <td class="p-3">
+              <a
+                [routerLink]="['/orders/detail', pedido.id]"
+                class="text-blue-500 hover:underline"
+              >
+                Ver Detalles
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

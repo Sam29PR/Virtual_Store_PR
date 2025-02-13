@@ -1,2 +1,37 @@
-<h1>Login</h1>
-<p>Página de inicio de sesión</p>
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+      <h2 class="text-2xl font-bold text-center mb-4">Iniciar Sesión</h2>
+  
+      <form>
+        <div class="mb-4">
+          <label class="block text-gray-700">Correo Electrónico</label>
+          <input
+            type="email"
+            class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="correo@ejemplo.com"
+          />
+        </div>
+  
+        <div class="mb-4">
+          <label class="block text-gray-700">Contraseña</label>
+          <input
+            type="password"
+            class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="********"
+          />
+        </div>
+  
+        <button
+          class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600"
+        >
+          Iniciar Sesión
+        </button>
+      </form>
+  
+      <p class="mt-4 text-center">
+        ¿No tienes cuenta?
+        <a routerLink="/auth/register" class="text-blue-500">Regístrate</a>
+      </p>
+    </div>
+  </div>
+  
